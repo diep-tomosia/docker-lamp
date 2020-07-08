@@ -1,0 +1,6 @@
+localhost:80 172.24.0.1 - - [08/Jul/2020:02:38:09 +0000] "GET / HTTP/1.1" 200 866 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+localhost:80 172.24.0.1 - - [08/Jul/2020:02:38:10 +0000] "GET /assets/css/bulma.min.css HTTP/1.1" 200 22080 "http://localhost:8089/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+localhost:80 172.24.0.1 - - [08/Jul/2020:02:38:10 +0000] "GET /favicon.ico HTTP/1.1" 404 489 "http://localhost:8089/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+localhost:80 172.27.0.1 - - [08/Jul/2020:02:54:34 +0000] "GET / HTTP/1.1" 200 866 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+localhost:80 172.27.0.1 - - [08/Jul/2020:02:54:34 +0000] "GET /assets/css/bulma.min.css HTTP/1.1" 200 22080 "http://localhost:8089/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+localhost:80 172.27.0.1 - - [08/Jul/2020:02:54:37 +0000] "GET /test_db.php HTTP/1.1" 200 396 "http://localhost:8089/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
