@@ -12,7 +12,6 @@ A basic LAMP stack environment built using Docker Compose. It consists of the fo
 * Apache
 * MySQL
 * phpMyAdmin
-* Redis
 
 As of now, we have several different PHP versions. Use appropriate php version as needed:
 
@@ -31,8 +30,8 @@ As of now, we have several different PHP versions. Use appropriate php version a
 * Run the `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/sprintcube/docker-compose-lamp.git
-cd docker-compose-lamp/
+git clone https://github.com/diep-tomosia/docker-lamp.git
+cd docker-lamp/
 cp sample.env .env
 // modify sample.env as needed
 docker-compose up -d
@@ -43,39 +42,21 @@ Your LAMP stack is now ready!! You can access it via `http://localhost`.
 
 ##  Configuration and Usage
 
-### General Information 
-This Docker Stack is build for local development and not for production usage.
-
-### Configuration
-This package comes with default configuration options. You can modify them by creating `.env` file in your root directory.
-To make it easy, just copy the content from `sample.env` file and update the environment variable values as per your need.
-
-### Configuration Variables
-There are following configuration variables available and you can customize them by overwritting in your own `.env` file.
-
 ---
-#### PHP
+#### Config file env
 ---
-_**PHPVERSION**_
-Is used to specify which PHP Version you want to use. Defaults always to latest PHP Version. 
+_**File ENV**_
 
-_**PHP_INI**_
-Define your custom `php.ini` modification to meet your requirments. 
+HOST_MACHINE_UNSECURE_HOST_PORT=8091
+HOST_MACHINE_MYSQL_PORT=3309
+HOST_MACHINE_PMA_PORT=8088
+MYSQL_USER=mysql
+MYSQL_PASSWORD=root
+MYSQL_DATABASE=lamp
 
 ---
 #### Apache 
 ---
-
-_**DOCUMENT_ROOT**_
-
-It is a document root for Apache server. The default value for this is `./www`. All your sites will go here and will be synced automatically.
-
-_**VHOSTS_DIR**_
-
-This is for virtual hosts. The default value for this is `./config/vhosts`. You can place your virtual hosts conf files here.
-
-> Make sure you add an entry to your system's `hosts` file for each virtual host.
-
 _**APACHE_LOG_DIR**_
 
 This will be used to store Apache logs. The default value for this is `./logs/apache2`.
@@ -83,13 +64,6 @@ This will be used to store Apache logs. The default value for this is `./logs/ap
 ---
 #### Database
 ---
-
-_**DATABASE**_
-Define which MySQL or MariaDB Version you would like to use. 
-
-_**MYSQL_DATA_DIR**_
-
-This is MySQL data directory. The default value for this is `./data/mysql`. All your MySQL data files will be stored here.
 
 _**MYSQL_LOG_DIR**_
 
@@ -127,8 +101,6 @@ By default following extensions are installed.
 May differ for PHP Verions <7.x.x
 
 * mysqli
-* pdo_sqlite
-* pdo_mysql
 * mbstring
 * zip
 * intl
@@ -150,10 +122,6 @@ phpMyAdmin is configured to run on port 8080. Use following default credentials.
 http://localhost:8080/  
 username: root  
 password: tiger
-
-## Redis
-
-It comes with Redis. It runs on default port `6379`.
 
 ## Contributing
 We are happy if you want to create a pull request or help people with their issues. If you want to create a PR, please remember that this stack is not built for production usage, and changes should good for general purpose and not overspecialized. 
